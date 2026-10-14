@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DMD"
+version = "0.1.0"
+description = "stuff to run the DMD!"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "opencv-python",
+    "erle",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "Pycrafter6500*"]
