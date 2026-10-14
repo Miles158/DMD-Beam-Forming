@@ -15,6 +15,8 @@ dependencies = [
     "matplotlib",
     "opencv-python",
     "erle",
+    "itertools",
+    "torch",
 ]
 
 [tool.setuptools.packages.find]
