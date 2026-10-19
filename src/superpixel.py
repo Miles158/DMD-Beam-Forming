@@ -48,3 +48,10 @@ def encode(target_complex_field, superpixel_dimension, commands, fields):
 
     return dmd_commands
 
+
+def to_image(dmd_commands, superpixel_dimension):
+    """(rows, cols, n*n) superpixel commands -> (rows*n, cols*n) mirror image."""
+    n = superpixel_dimension
+    n_rows, n_cols, _ = dmd_commands.shape
+    return dmd_commands.reshape(n_rows, n_cols, n, n).transpose(0, 2, 1, 3).reshape(n_rows * n, n_cols * n)
+ 
